@@ -1,0 +1,26 @@
+.barWrap {
+    position: relative;
+}
+
+.bar {
+    position: relative;
+    height: 30px;
+}
+
+.bar-outer {
+    position: absolute;
+    height: 30px;
+    border: 2px solid black;
+    background-color: gray;
+}
+
+.bar-inner {
+    position: absolute;
+    height: 30px;
+    font-size: 0px;
+    background-color: green;
+}
+
+.buttons {
+    position: relative;
+}
