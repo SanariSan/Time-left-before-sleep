@@ -14,32 +14,20 @@ export default (props) => {
 
     return (
         <div className="">
-            <p>
+            <p className="">
                 {hoursLeft < 10 ? '0' + hoursLeft : hoursLeft}:
                 {minutesLeft < 10 ? '0' + minutesLeft : minutesLeft}:
                 {secondsLeft < 10 ? '0' + secondsLeft : secondsLeft}
             </p>
-            <span className="bar">
-                {/* <aside
-                    className="bar-outer"
-                    style={{
-                        width: barWidth + 'px'
-                    }}>
-                    <p
-                        className="bar-inner"
-                        style={{
-                            width: calculatePosition() + 'px',
-                        }}>
-                    </p>
-                </aside> */}
+            <span className="bar positioning">
                 <p
-                    className="bar-outer"
+                    className="bar-outer positioning"
                     style={{
                         width: barWidth + 'px'
                     }}>
                 </p>
                 <p
-                    className="bar-inner"
+                    className="bar-inner positioning"
                     style={{
                         width: calculatePosition() + 'px',
                     }}>

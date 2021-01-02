@@ -1,26 +1,18 @@
-.barWrap {
-    position: relative;
-}
-
 .bar {
     position: relative;
     height: 30px;
+    border: 4px solid black;
+    border-radius: calc(3vmin);
 }
 
 .bar-outer {
     position: absolute;
-    height: 30px;
-    border: 2px solid black;
-    background-color: gray;
+    height: 100%;
+    background-color: rgb(253, 255, 206);
 }
 
 .bar-inner {
     position: absolute;
-    height: 30px;
-    font-size: 0px;
-    background-color: green;
-}
-
-.buttons {
-    position: relative;
+    height: 100%;
+    background-color: rgb(126, 255, 180);
 }

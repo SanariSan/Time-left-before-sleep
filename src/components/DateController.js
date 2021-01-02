@@ -2,6 +2,7 @@ import React from 'react';
 import Flatpickr from "react-flatpickr";
 import "flatpickr/dist/themes/dark.css";
 import DateDisplay from './DateDisplay'
+import './DateController.css';
 
 export class DateController extends React.Component {
     initState = {
@@ -40,9 +41,10 @@ export class DateController extends React.Component {
 
     render() {
         return (
-            <div className="">
+            <div>
                 <div className="pickerBlock">
-                    From: <Flatpickr
+                    <p>From</p>
+                    <Flatpickr
                         data-enable-time
                         value={this.state.dateTimeStart}
                         options={{
@@ -55,7 +57,8 @@ export class DateController extends React.Component {
                     <button onClick={() => this.setState({ dateTimeStart: Date.now() })}>Current time</button>
                 </div>
                 <div className="pickerBlock">
-                    To: <Flatpickr
+                    <p>To</p>
+                    <Flatpickr
                         data-enable-time
                         value={this.state.dateTimeEnd}
                         options={{
@@ -72,7 +75,7 @@ export class DateController extends React.Component {
                     current={this.state.current}
                     max={this.state.max}
                 />
-                <span className="buttons">
+                <span className="buttonsWrap">
                     <button onClick={this.startIncreasement}>Run</button>
                     <button onClick={() => this.setState(this.initState)}>Reset</button>
                 </span>
