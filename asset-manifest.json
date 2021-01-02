@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Time-left-before-sleep/static/css/main.21cb9610.chunk.css",
+    "main.js": "/Time-left-before-sleep/static/js/main.9296d549.chunk.js",
+    "main.js.map": "/Time-left-before-sleep/static/js/main.9296d549.chunk.js.map",
+    "runtime-main.js": "/Time-left-before-sleep/static/js/runtime-main.9e9b56c4.js",
+    "runtime-main.js.map": "/Time-left-before-sleep/static/js/runtime-main.9e9b56c4.js.map",
+    "static/css/2.58b41ad5.chunk.css": "/Time-left-before-sleep/static/css/2.58b41ad5.chunk.css",
+    "static/js/2.e3fdee38.chunk.js": "/Time-left-before-sleep/static/js/2.e3fdee38.chunk.js",
+    "static/js/2.e3fdee38.chunk.js.map": "/Time-left-before-sleep/static/js/2.e3fdee38.chunk.js.map",
+    "static/js/3.d9f53646.chunk.js": "/Time-left-before-sleep/static/js/3.d9f53646.chunk.js",
+    "static/js/3.d9f53646.chunk.js.map": "/Time-left-before-sleep/static/js/3.d9f53646.chunk.js.map",
+    "index.html": "/Time-left-before-sleep/index.html",
+    "static/css/2.58b41ad5.chunk.css.map": "/Time-left-before-sleep/static/css/2.58b41ad5.chunk.css.map",
+    "static/css/main.21cb9610.chunk.css.map": "/Time-left-before-sleep/static/css/main.21cb9610.chunk.css.map",
+    "static/js/2.e3fdee38.chunk.js.LICENSE.txt": "/Time-left-before-sleep/static/js/2.e3fdee38.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9e9b56c4.js",
+    "static/css/2.58b41ad5.chunk.css",
+    "static/js/2.e3fdee38.chunk.js",
+    "static/css/main.21cb9610.chunk.css",
+    "static/js/main.9296d549.chunk.js"
+  ]
+}
