@@ -1,5 +1,4 @@
 import React from 'react';
-import './DateDisplay.css'
 
 const barWidth = 1200;
 
@@ -13,21 +12,21 @@ export default (props) => {
     let secondsLeft = props.max - props.current - hoursLeft * 3600 - minutesLeft * 60;
 
     return (
-        <div className="">
-            <p className="">
+        <div className="dateDisplay">
+            <p>
                 {hoursLeft < 10 ? '0' + hoursLeft : hoursLeft}:
                 {minutesLeft < 10 ? '0' + minutesLeft : minutesLeft}:
                 {secondsLeft < 10 ? '0' + secondsLeft : secondsLeft}
             </p>
-            <span className="bar positioning">
+            <span className="bar">
                 <p
-                    className="bar-outer positioning"
+                    className="bar-outer"
                     style={{
                         width: barWidth + 'px'
                     }}>
                 </p>
                 <p
-                    className="bar-inner positioning"
+                    className="bar-inner"
                     style={{
                         width: calculatePosition() + 'px',
                     }}>

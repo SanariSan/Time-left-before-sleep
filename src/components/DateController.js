@@ -3,6 +3,7 @@ import Flatpickr from "react-flatpickr";
 import "flatpickr/dist/themes/dark.css";
 import DateDisplay from './DateDisplay'
 import './DateController.css';
+import './DateDisplay.css';
 
 export class DateController extends React.Component {
     initState = {
@@ -24,13 +25,16 @@ export class DateController extends React.Component {
             setTimeout(this._increasement, 1000);
         }
         else {
-            this.setState(this.initState);
+            this.setState({
+                working: false
+            });
         }
     }
 
     startIncreasement = async () => {
         if (!this.state.working && this.state.dateTimeStart < this.state.dateTimeEnd) {
             await this.setState({
+                current: 0,
                 max: Math.round((this.state.dateTimeEnd - this.state.dateTimeStart) / 1000)
             })
 
@@ -41,7 +45,7 @@ export class DateController extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="dateController">
                 <div className="pickerBlock">
                     <p>From</p>
                     <Flatpickr
@@ -71,7 +75,7 @@ export class DateController extends React.Component {
                     <button onClick={() => this.setState({ dateTimeEnd: Date.now() })}>Current time</button>
                 </div>
 
-                <DateDisplay className="barWrap"
+                <DateDisplay
                     current={this.state.current}
                     max={this.state.max}
                 />
