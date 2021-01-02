@@ -52,7 +52,8 @@ export class DateController extends React.Component {
                         data-enable-time
                         value={this.state.dateTimeStart}
                         options={{
-                            minuteIncrement: 1
+                            minuteIncrement: 1,
+                            enableSeconds: true
                         }}
                         onChange={date => {
                             this.setState({ dateTimeStart: (new Date(date)).getTime() });
@@ -66,7 +67,8 @@ export class DateController extends React.Component {
                         data-enable-time
                         value={this.state.dateTimeEnd}
                         options={{
-                            minuteIncrement: 1
+                            minuteIncrement: 1,
+                            enableSeconds: true
                         }}
                         onChange={date => {
                             this.setState({ dateTimeEnd: (new Date(date)).getTime() });
