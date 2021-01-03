@@ -3,9 +3,9 @@
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
-    width: 1200px;
+    width: calc(50px + 50vmin);
     position: relative;
-    margin: 20px;
+    margin: 20px auto;
     height: 30px;
     border: 4px solid black;
     border-radius: calc(3vmin);

@@ -1,12 +1,13 @@
 .App {
   text-align: center;
   background-color: #282c34;
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(3px + 2.5vmin);
   color: white;
 }
 
@@ -15,13 +16,13 @@ button {
   margin: 10px;
   border: 2px solid;
   border-color: rgb(149, 149, 149);
-  width: calc(80px + 7vmin);
+  width: calc(30px + 13vmin);
   height: calc(10px + 3vmin);
   border-radius: calc(3vmin);
-  font-family: 'Segoe UI';
+  font-family: 'FredokaOne-Regular';
   font-weight: bold;
   text-transform: uppercase;
-  font-size: calc(3px + 1vmin);
+  font-size: calc(3px + .9vmin);
   color: rgba(0, 0, 0, 0.6);
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -38,8 +39,8 @@ button:hover {
 input {
   font-family: 'Segoe UI';
   font-weight: bold;
-  width: calc(80px + 7vmin);
-  height: calc(6px + 2vmin);
+  width: calc(20px + 12vmin);
+  height: calc(4px + 2.2vmin);
   font-size: calc(3px + 1vmin);
   color: rgba(0, 0, 0, 0.6);
   padding: calc(.5vmin);
@@ -59,14 +60,38 @@ h1 {
   font-size: calc(28px + 4vmin);
 }
 
+.time {
+  display: flex;
+  margin: auto;
+  width: min-content;
+}
+
 p {
   display: block;
   margin: 25px 0px;
+  font-size: calc(3px + 3vmin);
+}
+
+.flatpickr-calendar {
+  font-family: 'Segoe UI';
+}
+
+.no-active-bar {
+  margin: 25px 0px;
+  color: rgb(253, 255, 206);
+}
+
+.timer-finished {
+  color: rgb(93, 255, 161);
 }
 
 .dateController {
+  width: calc(50px + 55vmin);
+  height: calc(300px + 10vmin);
   border: 2px solid rgb(131, 131, 131);
-  padding: calc(20px + 4vmin);
+  padding: calc(15px + 2vmin);
+  padding-bottom: calc(30px + 4vmin);
+  padding-top: calc(10px + 4vmin);
   background-color: rgb(57, 64, 78);
 }
 
@@ -74,8 +99,7 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 50px;
-  width: 50%;
-  margin: 70px;
+  margin: calc(5px + 3vmin);
   margin-left: auto;
   margin-right: auto;
 }
