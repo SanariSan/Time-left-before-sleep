@@ -6,8 +6,8 @@
     width: calc(50px + 50vmin);
     position: relative;
     margin: 20px auto;
-    height: 30px;
-    border: 4px solid black;
+    height: calc(7px + 2vmin);
+    border: calc(2px + .2vmin) solid black;
     border-radius: calc(3vmin);
 }
 

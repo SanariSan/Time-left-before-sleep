@@ -10,11 +10,11 @@ export class DateController extends React.Component {
         timestampStart: Date.now(),
         timestampEnd: Date.now(),
         realTimeStart: 0,
-        overallCorrection: 0,
         progressTimeCurrent: 0,
         progressTimeMax: 0,
         working: false,
-        ended: false
+        ended: false,
+        timePreview: false
     };
 
     state = this.initState;
@@ -28,7 +28,6 @@ export class DateController extends React.Component {
 
         await this.setState({
             progressTimeCurrent: this.state.timestampStart + correction,
-            overallCorrection: correction,
         });
 
         if (this.state.progressTimeCurrent < this.state.progressTimeMax) {
@@ -37,7 +36,8 @@ export class DateController extends React.Component {
         else {
             await this.setState({
                 working: false,
-                ended: true
+                ended: true,
+                timePreview: false
             });
         }
     }
@@ -56,6 +56,18 @@ export class DateController extends React.Component {
         }
     }
 
+    changeDate = async (name, value) => {
+        await this.setState({
+            [name]: (new Date(value)).getTime(),
+            timePreview: true
+        });
+
+        this.setState({
+            progressTimeCurrent: this.state.timestampStart,
+            progressTimeMax: this.state.timestampEnd,
+        });
+    }
+
     render() {
         return (
             <div className="dateController">
@@ -68,11 +80,9 @@ export class DateController extends React.Component {
                             minuteIncrement: 1,
                             enableSeconds: true
                         }}
-                        onChange={date => {
-                            this.setState({ timestampStart: (new Date(date)).getTime() });
-                        }}
+                        onChange={date => this.changeDate('timestampStart', date)}
                     />
-                    <button onClick={() => this.setState({ timestampStart: Date.now() })}>Current time</button>
+                    <button onClick={() => this.changeDate('timestampStart', new Date())}>Current time</button>
                 </div>
                 <div className="pickerBlock">
                     <p>To</p>
@@ -83,14 +93,12 @@ export class DateController extends React.Component {
                             minuteIncrement: 1,
                             enableSeconds: true
                         }}
-                        onChange={date => {
-                            this.setState({ timestampEnd: (new Date(date)).getTime() });
-                        }}
+                        onChange={date => this.changeDate('timestampEnd', date)}
                     />
-                    <button onClick={() => this.setState({ timestampEnd: Date.now() })}>Current time</button>
+                    <button onClick={() => this.changeDate('timestampEnd', new Date())}>Current time</button>
                 </div>
 
-                {this.state.working ?
+                {this.state.working || this.state.timePreview ?
                     <DateDisplay
                         timestampStart={this.state.timestampStart}
                         progressTimeCurrent={this.state.progressTimeCurrent}

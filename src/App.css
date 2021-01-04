@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #282c34;
+  background-color: #323a5d;
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -9,12 +9,15 @@
   justify-content: center;
   font-size: calc(3px + 2.5vmin);
   color: white;
+  background: linear-gradient(300deg, #272c42, #2f1b42);
+  background-size: 150% 150%;
+  /* animation: gradient 8s ease infinite; */
 }
 
 button {
   cursor: pointer;
   margin: 10px;
-  border: 2px solid;
+  border: calc(1px + .1vmin) solid;
   border-color: rgb(149, 149, 149);
   width: calc(30px + 13vmin);
   height: calc(10px + 3vmin);
@@ -31,7 +34,7 @@ button {
 }
 
 button:hover {
-  border-color: rgb(218, 255, 253);
+  border-color: rgb(183, 255, 251);
   color: rgba(0, 0, 0, 1);
   background-color: rgb(218, 255, 253);
 }
@@ -43,9 +46,12 @@ input {
   height: calc(4px + 2.2vmin);
   font-size: calc(3px + 1vmin);
   color: rgba(0, 0, 0, 0.6);
+  border: calc(1px + .1vmin) solid;
+  border-color: rgb(149, 149, 149);
   padding: calc(.5vmin);
   margin: 10px;
   text-align: center;
+  border-radius: calc(.7vmin);
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -54,22 +60,28 @@ input {
 
 input:hover {
   color: rgba(0, 0, 0, 1);
+  border-color: rgb(183, 255, 251);
+  background-color: rgb(218, 255, 253);
 }
 
 h1 {
   font-size: calc(28px + 4vmin);
 }
 
-.time {
-  display: flex;
-  margin: auto;
-  width: min-content;
-}
-
 p {
   display: block;
   margin: 25px 0px;
   font-size: calc(3px + 3vmin);
+}
+
+.time {
+  display: flex;
+  margin-left: calc(15px + 18vmin);
+  width: min-content;
+}
+
+.time p {
+  margin: 0px 3px;
 }
 
 .flatpickr-calendar {
@@ -88,11 +100,20 @@ p {
 .dateController {
   width: calc(50px + 55vmin);
   height: calc(300px + 10vmin);
-  border: 2px solid rgb(131, 131, 131);
+  border: calc(1px + .05vmin) solid rgb(131, 131, 131);
   padding: calc(15px + 2vmin);
   padding-bottom: calc(30px + 4vmin);
   padding-top: calc(10px + 4vmin);
-  background-color: rgb(57, 64, 78);
+  background: rgba(51, 57, 70, 0.26);
+  border-radius: calc(3vmin);
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.dateController:hover {
+  background: rgba(56, 62, 77, 0.452);
 }
 
 .pickerBlock {
@@ -107,5 +128,6 @@ p {
 .pickerBlock p {
   height: calc(10px + 3vmin);
   margin: 10px;
-  text-align: center;
+  margin-left: calc(10px + 5vmin);
+  text-align: left;
 }

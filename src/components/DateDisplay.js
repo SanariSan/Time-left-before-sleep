@@ -38,7 +38,7 @@ export default (props) => {
     }
 
     let dateShow;
-    if (props.progressTimeMax && props.progressTimeCurrent)
+    if (props.progressTimeMax && props.progressTimeCurrent && props.progressTimeCurrent < props.progressTimeMax)
         dateShow = new Date(props.progressTimeMax - props.progressTimeCurrent); //1899-01-01 / X-X-X
     else {
         dateShow = new Date(Date.UTC(0, 0, 0, 0, 0, 0, 0));
@@ -52,12 +52,14 @@ export default (props) => {
     return (
         <div className="dateDisplay">
             <div className="time">
-                {hoursLeft < 10 ? '0' + hoursLeft : hoursLeft}:
-                {minutesLeft < 10 ? '0' + minutesLeft : minutesLeft}:
-                {secondsLeft < 10 ? '0' + secondsLeft : secondsLeft}:
-                {mSecondsLeft < 10 ? '00' + mSecondsLeft :
+                <p>{hoursLeft < 10 ? '0' + hoursLeft : hoursLeft}</p>:
+                <p>{minutesLeft < 10 ? '0' + minutesLeft : minutesLeft}</p>
+                :
+                <p>{secondsLeft < 10 ? '0' + secondsLeft : secondsLeft}</p>
+                :
+                <p>{mSecondsLeft < 10 ? '00' + mSecondsLeft :
                     mSecondsLeft < 100 ? '0' + mSecondsLeft :
-                        mSecondsLeft === 1000 ? 999 : mSecondsLeft}
+                        mSecondsLeft === 1000 ? 999 : mSecondsLeft}</p>
             </div>
 
             <span className="bar">
