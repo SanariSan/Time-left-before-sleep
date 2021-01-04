@@ -2,9 +2,6 @@ Pick date and time to see how much time left before sleep.
 Hope that helps with time management.
 
 *Upd. 
+Realized I made just timer, but with progress bar :D
 
-Recently realized I made just timer, but with progress bar :D
-
-Anyways, main goal reached, even some css been done.
-
-But still much to add/change in future, when learn new tools.
+![Preview](https://github.com/SanariSan/Time-left-before-sleep/blob/master/preview.png?raw=true)
