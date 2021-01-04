@@ -57,15 +57,17 @@ export class DateController extends React.Component {
     }
 
     changeDate = async (name, value) => {
-        await this.setState({
-            [name]: (new Date(value)).getTime(),
-            timePreview: true
-        });
+        if (!this.state.working) {
+            await this.setState({
+                [name]: (new Date(value)).getTime(),
+                timePreview: true
+            });
 
-        this.setState({
-            progressTimeCurrent: this.state.timestampStart,
-            progressTimeMax: this.state.timestampEnd,
-        });
+            this.setState({
+                progressTimeCurrent: this.state.timestampStart,
+                progressTimeMax: this.state.timestampEnd,
+            });
+        }
     }
 
     render() {
