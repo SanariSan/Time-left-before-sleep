@@ -8,4 +8,4 @@ Aslo should be good on both mobile and pc
 
 https://sanarisan.github.io/Time-left-before-sleep/
 
-![Preview](https://github.com/SanariSan/Time-left-before-sleep/blob/master/preview.png?raw=true)
+![Preview](https://github.com/SanariSan/Time-left-before-sleep/blob/master/preview2.png?raw=true)
