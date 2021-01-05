@@ -5,20 +5,56 @@
     overflow: hidden;
     width: calc(50px + 50vmin);
     position: relative;
-    margin: 20px auto;
+    margin: 5px auto;
     height: calc(7px + 2vmin);
     border: calc(2px + .2vmin) solid black;
     border-radius: calc(3vmin);
 }
 
+.dateDisplay .percents-nums {
+    display: grid;
+    width: calc(50px + 50vmin);
+    margin: auto;
+    margin-top: 20px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.dateDisplay .percents-nums p {
+    font-size: calc(3px + 1vmin);
+    text-align: right;
+    margin: 0px;
+    margin-left: 95%;
+    opacity: 0.7;
+}
+
+.dateDisplay .percents-marks {
+    display: grid;
+    width: calc(50px + 50vmin);
+    margin: auto;
+    margin-bottom: 20px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.dateDisplay .percents-marks p {
+    font-size: calc(3px + 1vmin);
+    text-align: right;
+    margin: 0px;
+    margin-left: 102%;
+    opacity: 0.7;
+}
+
 .bar-outer {
     position: absolute;
     height: 100%;
-    background-color: rgb(253, 255, 206);
+    background-color: rgb(193, 251, 255);
 }
 
 .bar-inner {
     position: absolute;
     height: 100%;
     background-color: rgb(93, 255, 161);
+    border-top: calc(2px + .1vmin) solid rgb(0, 0, 0);
+    border-right: calc(2px + .1vmin) solid rgb(0, 0, 0);
+    border-bottom: calc(2px + .1vmin) solid rgb(0, 0, 0);
+    border-radius: calc(3vmin);
 }

@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from 'react';
 
 export default (props) => {
+    const colors = {
+        green: 'rgb(45, 255, 133)',
+        yellow: 'rgb(217, 219, 56)',
+        orange: 'rgb(255, 145, 82)',
+        red: 'rgb(255, 93, 87)'
+    };
     const [barWidth, setBarWidth] = useState();
     const [dimensions, setDimensions] = useState({
         height: window.innerHeight,
         width: window.innerWidth
-    })
+    });
+    let barColor = null;
 
     useEffect(() => {
         const bar = document.getElementsByClassName('bar')[0];
@@ -30,6 +37,19 @@ export default (props) => {
             let current = wholeBar - (props.progressTimeMax - props.progressTimeCurrent);
             let currentPercentTime = (current / wholeBar) * 100;
             let currentPositionBar = Math.round(barWidth / 100 * currentPercentTime);
+
+            if (currentPercentTime <= 25 && barColor !== colors.green) {
+                barColor = colors.green;
+            }
+            else if (currentPercentTime <= 50 && barColor !== colors.yellow) {
+                barColor = colors.yellow;
+            }
+            else if (currentPercentTime <= 75 && barColor !== colors.orange) {
+                barColor = colors.orange;
+            }
+            else if (currentPercentTime <= 100 && barColor !== colors.red) {
+                barColor = colors.red;
+            }
 
             return currentPositionBar;
         }
@@ -62,6 +82,12 @@ export default (props) => {
                         mSecondsLeft === 1000 ? 999 : mSecondsLeft}</p>
             </div>
 
+            <div className="percents-nums">
+                <p>25%</p>
+                <p>50%</p>
+                <p>75%</p>
+            </div>
+
             <span className="bar">
                 <p
                     className="bar-outer"
@@ -73,9 +99,16 @@ export default (props) => {
                     className="bar-inner"
                     style={{
                         width: calculatePosition() + 'px',
+                        backgroundColor: barColor,
                     }}>
                 </p>
             </span>
+
+            <div className="percents-marks">
+                <p>|</p>
+                <p>|</p>
+                <p>|</p>
+            </div>
         </div>
     )
 };
