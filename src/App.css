@@ -99,7 +99,7 @@ p {
 
 .dateController {
   width: calc(50px + 55vmin);
-  height: calc(300px + 10vmin);
+  height: calc(320px + 18vmin);
   border: calc(1px + .05vmin) solid rgb(131, 131, 131);
   padding: calc(15px + 2vmin);
   padding-bottom: calc(30px + 4vmin);

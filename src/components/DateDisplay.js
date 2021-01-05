@@ -69,6 +69,8 @@ export default (props) => {
     let secondsLeft = dateShow.getUTCSeconds();
     let mSecondsLeft = dateShow.getUTCMilliseconds();
 
+    let barPosition = calculatePosition();
+
     return (
         <div className="dateDisplay">
             <div className="time">
@@ -98,7 +100,8 @@ export default (props) => {
                 <p
                     className="bar-inner"
                     style={{
-                        width: calculatePosition() + 'px',
+                        opacity: barPosition !== 0 ? 1 : 0,
+                        width: barPosition + 'px',
                         backgroundColor: barColor,
                     }}>
                 </p>
